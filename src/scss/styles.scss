@@ -1,12 +1,12 @@
 $font-family: Nunito, sans-serif;
-$size-section-heading: 1.5rem; // 24px
-$size-sub-heading: 1.25rem; // 20px
-$size-body-emphasize: 1.125rem; // 18px
-$size-body-normal: 1rem; // 16px;
+$size-section-heading: 1.5rem; // h2, 24px
+$size-sub-heading: 1.25rem; // h3, 20px
+$size-body-emphasize: 1.125rem; // p 18px
+$size-body-normal: 1rem; // p, 16px;
 $color-primary: #5d5d5d;
-$padding-primary: 30px;
-$padding-secondary: 10px;
-$nav-bar-height: 60px;
+$padding-primary: 30px; // static
+$padding-secondary: 10px; // static
+$nav-bar-height: 3.75; // 60px;
 
 body {
   font-family: $font-family;
