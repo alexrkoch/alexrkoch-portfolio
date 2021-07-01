@@ -1,3 +1,7 @@
+// BREAKPOINT NOTES
+// If on large text in browser, at 100%,
+// 950px wide is a good tablet breakpoint.
+
 $font-family: Nunito, sans-serif;
 $size-section-heading: 1.5rem; // h2, 24px
 $size-sub-heading: 1.25rem; // h3, 20px
@@ -43,49 +47,32 @@ body {
     }
   }
   &__links {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 128px;
     list-style-type: none;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    grid-area: 1 / 3 / 2 / 4;
-  }
-  &__contact {
-    //padding-left: 2rem;
-    //padding-right: 2rem;
-    padding: 0.5rem;
-    //border: 1px solid white;
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    grid-area: 1 / 4 / 2 / 5;
-    &--title {
-      padding-right: 0.5rem;
-      font-size: $size-sub-heading;
-      font-weight: 550;
+    grid-area: 1 / 3 / 2 / 5;
+    &--linkedin {
+      border: 1px solid white;
+      padding: 0.25rem;
+      border-radius: 8px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
     }
-  }
-  &__linkedin {
-    border: 1px solid white;
-    padding: 0.25rem;
-    border-radius: 8px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    &--text {
+    &--linkedin-text {
       padding-left: 0.5rem;
     }
-  }
-  &__upwork {
-    border: 1px solid white;
-    padding: 0.25rem;
-    border-radius: 8px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    &--text {
+    &--upwork {
+      border: 1px solid white;
+      padding: 0.25rem;
+      border-radius: 8px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    &--upwork-text {
       padding-left: 0.5rem;
     }
   }
