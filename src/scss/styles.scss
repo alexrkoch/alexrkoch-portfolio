@@ -24,9 +24,19 @@ $nav-bar-height: 3.75rem; // 60px;
 body {
   font-family: $font-family;
   font-size: $size-body-normal;
+  display: grid;
+  grid-template-columns: 1fr repeat(3, minmax(0, 280px)) 1fr;
+  grid-template-rows: $nav-bar-height 1fr 1fr 1fr;
+}
+
+h1,
+h2 {
+  font-size: $size-section-heading;
+  font-weight: bold;
 }
 
 .navbar {
+  grid-area: 1 / 1 / 2 / 6;
   position: fixed;
   top: 0;
   color: $color-secondary;
@@ -48,7 +58,7 @@ body {
     }
   }
   &__links {
-    padding-left: 128px;
+    padding-left: 130px;
     list-style-type: none;
     display: flex;
     align-items: center;
@@ -88,4 +98,21 @@ body {
       padding-left: 0.5rem;
     }
   }
+}
+
+.about {
+  grid-area: 2 / 2 / 3 / 4;
+  &__title {
+    margin-bottom: $padding-secondary;
+  }
+  &__body:last-of-type {
+    margin-top: $padding-secondary;
+  }
+}
+
+.photo {
+  grid-area: 2 / 4 / 4 / 5;
+  border-radius: 50%;
+  width: 325px;
+  height: 325px;
 }
