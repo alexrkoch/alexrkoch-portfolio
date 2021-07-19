@@ -3,4 +3,3 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/alextksy/public_html/
     - /bin/cp /dist/index.html $DEPLOYPATH
-    - /bin/cp /dist/css/styles.min.css $DEPLOYPATH
