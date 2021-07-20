@@ -21,6 +21,9 @@ $color-secondary: white;
 $padding-primary: 30px; // static
 $padding-secondary: 10px; // static
 $nav-bar-height: rem(60); // dynamic
+$content-max-width: 840px;
+$content-min-width: 320px;
+$content-margins: 20px;
 
 // NORMALIZE & RESET
 
@@ -38,7 +41,9 @@ body {
   font-family: $font-family;
   font-size: $size-body-normal;
   display: grid;
-  grid-template-columns: 1fr minmax(320px, 840px) 1fr;
+  grid-template-columns:
+    minmax($content-margins, 1fr) minmax($content-min-width, $content-max-width)
+    minmax($content-margins, 1fr);
   grid-template-rows: $nav-bar-height auto;
 }
 
@@ -49,34 +54,42 @@ h2 {
 }
 
 .navbar {
-  grid-area: 1 / 1 / 2 / 4;
+  grid-area: 1 / 2 / 2 / 3;
   position: fixed;
   top: 0;
   color: $color-secondary;
   background-color: $color-primary;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr repeat(3, minmax(0, 280px)) 1fr;
+  grid-template-columns:
+    minmax($content-margins, 1fr) minmax($content-min-width, $content-max-width)
+    minmax($content-margins, 1fr);
   grid-template-rows: $nav-bar-height;
   align-items: center;
-
+  &__content-container {
+    grid-area: 1 / 2 / 2 / 3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 30px;
+  }
   &__logo {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    grid-area: 1 / 2 / 2 / 3;
+
     &--subtitle {
       padding-left: 0.5rem;
       font-style: italic;
     }
   }
   &__links {
-    padding-left: 130px;
     list-style-type: none;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    grid-area: 1 / 3 / 2 / 5;
+    column-gap: 15px;
     a {
       color: white;
       text-decoration: none;
