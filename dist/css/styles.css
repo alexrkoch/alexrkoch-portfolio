@@ -114,17 +114,22 @@ h2 {
   grid-area: 3/2/4/5;
   margin-bottom: 30px;
 }
-.portfolio__title {
-  margin-bottom: 10px;
-}
-.portfolio__body:last-of-type {
-  margin-top: 10px;
+.portfolio__body {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-template-rows: max-content max-content max-content;
+  align-items: start;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
 }
 .portfolio__link {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   padding-right: 0.4rem;
   padding-left: 0.4rem;
+  width: fit-content;
+  height: auto;
   border-radius: 8px;
   color: white;
   background-color: #5d5d5d;

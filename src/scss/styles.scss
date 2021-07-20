@@ -24,6 +24,8 @@ $nav-bar-height: rem(60); // dynamic
 $content-max-width: 840px;
 $content-min-width: 320px;
 $content-margins: 20px;
+$link-padding-top-bottom: 0.25rem;
+$link-padding-left-right: 0.4rem;
 
 // NORMALIZE & RESET
 
@@ -150,17 +152,23 @@ h2 {
 .portfolio {
   grid-area: 3 / 2 / 4 / 5;
   margin-bottom: $padding-primary;
-  &__title {
-    margin-bottom: $padding-secondary;
-  }
-  &__body:last-of-type {
-    margin-top: $padding-secondary;
+
+  &__body {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: max-content max-content max-content;
+    align-items: start;
+    justify-content: center;
+    gap: $padding-primary;
+    width: 100%;
   }
   &__link {
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-    padding-right: 0.4rem;
-    padding-left: 0.4rem;
+    padding-top: $link-padding-top-bottom;
+    padding-bottom: $link-padding-top-bottom;
+    padding-right: $link-padding-left-right;
+    padding-left: $link-padding-left-right;
+    width: fit-content;
+    height: auto;
     border-radius: 8px;
     color: $color-secondary;
     background-color: $color-primary;
