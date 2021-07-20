@@ -54,6 +54,10 @@ h2 {
   font-size: $size-section-heading;
   font-weight: bold;
 }
+h3 {
+  font-size: $size-body-emphasize;
+  font-weight: bold;
+}
 
 .navbar {
   grid-area: 1 / 2 / 2 / 3;
@@ -133,7 +137,7 @@ h2 {
 }
 
 .about {
-  margin-bottom: $padding-secondary;
+  margin-bottom: $padding-primary;
   &__title {
     margin-bottom: $padding-secondary;
   }
@@ -152,7 +156,9 @@ h2 {
 .portfolio {
   grid-area: 3 / 2 / 4 / 5;
   margin-bottom: $padding-primary;
-
+  &__title {
+    margin-bottom: $padding-secondary;
+  }
   &__body {
     display: grid;
     grid-template-columns: max-content 1fr;
@@ -161,6 +167,12 @@ h2 {
     justify-content: center;
     gap: $padding-primary;
     width: 100%;
+  }
+  &__title-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $padding-secondary;
   }
   &__link {
     padding-top: $link-padding-top-bottom;
