@@ -120,5 +120,14 @@ h2 {
 .portfolio__body:last-of-type {
   margin-top: 10px;
 }
+.portfolio__link {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-right: 0.4rem;
+  padding-left: 0.4rem;
+  border-radius: 8px;
+  color: white;
+  background-color: #5d5d5d;
+}
 
 /*# sourceMappingURL=styles.css.map */
