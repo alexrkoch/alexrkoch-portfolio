@@ -94,6 +94,13 @@ h3 {
   padding-left: 0.5rem;
 }
 
+#about-me-link,
+#portfolio-link {
+  margin-top: -4.0625rem;
+  padding-bottom: 4.0625rem;
+  display: block;
+}
+
 .content {
   grid-area: 2/2/3/3;
 }

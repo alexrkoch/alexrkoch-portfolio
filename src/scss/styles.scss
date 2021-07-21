@@ -20,7 +20,8 @@ $color-primary: #5d5d5d;
 $color-secondary: white;
 $padding-primary: 30px; // static
 $padding-secondary: 10px; // static
-$nav-bar-height: rem(60); // dynamic
+$navbar-height: rem(60); // dynamic
+$navbar-headbutt: 65; // compare to navbar-height above
 $content-max-width: 840px;
 $content-min-width: 320px;
 $content-margins: 20px;
@@ -46,7 +47,7 @@ body {
   grid-template-columns:
     minmax($content-margins, 1fr) minmax($content-min-width, $content-max-width)
     minmax($content-margins, 1fr);
-  grid-template-rows: $nav-bar-height auto;
+  grid-template-rows: $navbar-height auto;
 }
 
 h1,
@@ -70,7 +71,7 @@ h3 {
   grid-template-columns:
     minmax($content-margins, 1fr) minmax($content-min-width, $content-max-width)
     minmax($content-margins, 1fr);
-  grid-template-rows: $nav-bar-height;
+  grid-template-rows: $navbar-height;
   align-items: center;
   &__content-container {
     grid-area: 1 / 2 / 2 / 3;
@@ -130,6 +131,13 @@ h3 {
       padding-left: 0.5rem;
     }
   }
+}
+
+#about-me-link,
+#portfolio-link {
+  margin-top: rem(-1 * ($navbar-headbutt));
+  padding-bottom: rem($navbar-headbutt);
+  display: block;
 }
 
 .content {
