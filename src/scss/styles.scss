@@ -12,7 +12,8 @@
 // VARIABLES
 
 $font-family: Nunito, sans-serif;
-$size-section-heading: rem(24); // h2
+$size-navbar-title: rem(24); // h1
+$size-section-heading: rem(28); // h2
 $size-sub-heading: rem(20); // h3
 $size-body-emphasize: rem(18); // p
 $size-body-normal: rem(16); // p
@@ -50,14 +51,17 @@ body {
   grid-template-rows: $navbar-height auto;
 }
 
-h1,
+h1 {
+  font-size: $size-navbar-title;
+  font-weight: bold;
+}
 h2 {
   font-size: $size-section-heading;
   font-weight: bold;
 }
 h3 {
   font-size: $size-body-emphasize;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 .navbar {
@@ -134,7 +138,8 @@ h3 {
 }
 
 #about-me-link,
-#portfolio-link {
+#portfolio-link,
+#cv-link {
   margin-top: rem(-1 * ($navbar-headbutt));
   padding-bottom: rem($navbar-headbutt);
   display: block;
@@ -192,5 +197,22 @@ h3 {
     border-radius: 8px;
     color: $color-secondary;
     background-color: $color-primary;
+  }
+}
+
+.cv {
+  grid-area: 4 / 2 / 5 / 5;
+  margin-bottom: $padding-primary;
+  &__title {
+    margin-bottom: $padding-secondary;
+  }
+  &__body {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: max-content max-content max-content;
+    align-items: start;
+    justify-content: center;
+    gap: $padding-primary;
+    width: 100%;
   }
 }
