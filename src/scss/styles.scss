@@ -13,17 +13,17 @@
 
 $font-family: Nunito, sans-serif;
 $size-navbar-title: rem(24); // h1
-$size-section-heading: rem(28); // h2
+$size-section-heading: rem(32); // h2
 $size-sub-heading: rem(20); // h3
 $size-body-emphasize: rem(18); // p
 $size-body-normal: rem(16); // p
 $color-primary: #5d5d5d;
 $color-secondary: white;
 $padding-primary: 30px; // static
-$padding-secondary: 10px; // static
+$padding-secondary: 15px; // static
 $navbar-height: rem(60); // dynamic
 $navbar-headbutt: 65; // compare to navbar-height above
-$content-max-width: 840px;
+$content-max-width: 800px;
 $content-min-width: 320px;
 $content-margins: 20px;
 $link-padding-top-bottom: 0.25rem;
@@ -61,7 +61,7 @@ h2 {
 }
 h3 {
   font-size: $size-body-emphasize;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 .navbar {
@@ -174,18 +174,12 @@ h3 {
   }
   &__body {
     display: grid;
-    grid-template-columns: max-content 1fr;
+    grid-template-columns: max-content max-content 1fr;
     grid-template-rows: max-content max-content max-content;
     align-items: start;
     justify-content: center;
     gap: $padding-primary;
     width: 100%;
-  }
-  &__title-link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: $padding-secondary;
   }
   &__link {
     padding-top: $link-padding-top-bottom;
@@ -198,11 +192,14 @@ h3 {
     color: $color-secondary;
     background-color: $color-primary;
   }
+  &__subtitle {
+    text-align: center;
+  }
 }
 
 .cv {
   grid-area: 4 / 2 / 5 / 5;
-  margin-bottom: $padding-primary;
+  margin-bottom: 800px;
   &__title {
     margin-bottom: $padding-secondary;
   }
