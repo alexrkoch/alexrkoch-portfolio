@@ -124,7 +124,8 @@ h3 {
   float: right;
   border-radius: 50%;
   width: 17.5rem;
-  padding: 30px;
+  margin: 30px;
+  margin-right: 0;
 }
 
 .portfolio {
@@ -173,6 +174,24 @@ h3 {
   justify-content: center;
   gap: 30px;
   width: 100%;
+}
+
+@media (max-width: 840px) {
+  .navbar__links {
+    flex-direction: column;
+    position: fixed;
+    width: 150px;
+    height: 200px;
+    z-index: 1;
+    top: -5px;
+    right: 0;
+    border: 1.5px solid black;
+    border-radius: 5px;
+    background-color: #5d5d5d;
+    overflow-x: hidden;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

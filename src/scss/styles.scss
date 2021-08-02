@@ -163,7 +163,8 @@ h3 {
   float: right;
   border-radius: 50%;
   width: rem(280);
-  padding: $padding-primary;
+  margin: $padding-primary;
+  margin-right: 0;
 }
 
 .portfolio {
@@ -213,3 +214,34 @@ h3 {
     width: 100%;
   }
 }
+
+// MEDIA QUERIES
+
+// show hamburger button
+
+// make navbar links vertical
+
+// show navbar close button
+// for tablet and smaller
+@media (max-width: ($content-max-width + ($content-margins * 2))) {
+  .navbar__links {
+    flex-direction: column;
+    position: fixed;
+    width: 150px;
+    height: 200px;
+    z-index: 1;
+    top: -5px;
+    right: 0;
+    border: 1.5px solid black;
+    border-radius: 5px;
+    background-color: $color-primary;
+    overflow-x: hidden;
+    // transition: 0.5s;
+    padding-top: $padding-secondary;
+    padding-bottom: $padding-secondary;
+  }
+}
+
+// move photo to navbar
+
+// hide "Web Developer" in navbar
